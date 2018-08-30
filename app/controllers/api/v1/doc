@@ -1,0 +1,57 @@
+
+{
+  "url": "https://stream.watsonplatform.net/speech-to-text/api",
+  "username": "2bf8e70a-69ec-48e1-bb31-942c4af35ae0",
+  "password": "NlPXhkPb4q7b"
+}
+
+
+composition = @client.video.compositions.create(room_sid: 'RM0d1f38e0c85667feab280b591e4bca18',audio_sources: 'RT45c309af45167eb2236b189b169452b3',format: 'mp3')
+
+
+
+curl -X POST -u "2bf8e70a-69ec-48e1-bb31-942c4af35ae0:NlPXhkPb4q7b" --header "Content-Type: audio/webm" --data-binary big-buck-bunny_trailer.webm "https://stream.watsonplatform.net/speech-to-text/api/v1/recognize?"
+
+curl https://apis.voicebase.com/v3/media --form 'mediaUrl=https://video.twilio.com/v1/Compositions/CJ842040225b564bfe3ca7e85cdc977dd0/Media' --header "Authorization: Bearer ${TOKEN}" | tee media-post.json | jq .
+
+
+curl -X POST -u "2bf8e70a-69ec-48e1-bb31-942c4af35ae0:NlPXhkPb4q7b" "https://stream.watsonplatform.net/speech-to-text/api/v1/register_callback?callback_url=https://https://2b352c0a.ngrok.io/api/video_calls/transcript_callback"
+
+
+curl -X POST -u {username}:{password} --header "Content-Type: audio/flac" --data-binary @audio-file.flac "https://stream.watsonplatform.net/speech-to-text/api/v1/recognitions?callback_url=https://https://2b352c0a.ngrok.io/api/video_calls/transcript_callback&session_id=1"
+
+
+[<Twilio.Video.V1.RoomRecordingInstance account_sid: ACb4cdf82e702ae4126df1a2019ccaaf97 status: completed date_created: 2018-07-12 07:05:41 UTC sid: RT3da243010d7790b40effd6ba3e106242 source_sid: MT482c7d87ac74b183858301f1045cdbfa size: 304965 url: https://video.twilio.com/v1/Rooms/RM0d1f38e0c85667feab280b591e4bca18/Recordings/RT3da243010d7790b40effd6ba3e106242 type: video duration: 20 container_format: mkv codec: vp8 grouping_sids: {"room_sid"=>"RM0d1f38e0c85667feab280b591e4bca18", "participant_sid"=>"PAc0ebc8befb00fc9e2c3b6c47df72c090"} track_name: Camera room_sid: RM0d1f38e0c85667feab280b591e4bca18 links: {"media"=>"https://video.twilio.com/v1/Rooms/RM0d1f38e0c85667feab280b591e4bca18/Recordings/RT3da243010d7790b40effd6ba3e106242/Media"}>, 
+ <Twilio.Video.V1.RoomRecordingInstance account_sid: ACb4cdf82e702ae4126df1a2019ccaaf97 status: completed date_created: 2018-07-12 07:04:59 UTC sid: RTd4495435ac0b179d4b32a68540b092fa source_sid: MT4e97abcf390a5c4ba015ad31c4c496f2 size: 24408 url: https://video.twilio.com/v1/Rooms/RM0d1f38e0c85667feab280b591e4bca18/Recordings/RTd4495435ac0b179d4b32a68540b092fa type: audio duration: 4 container_format: mka codec: opus grouping_sids: {"room_sid"=>"RM0d1f38e0c85667feab280b591e4bca18", "participant_sid"=>"PA4aa32e03f2c8b2f0aa5b250a87f7be67"} track_name: Microphone room_sid: RM0d1f38e0c85667feab280b591e4bca18 links: {"media"=>"https://video.twilio.com/v1/Rooms/RM0d1f38e0c85667feab280b591e4bca18/Recordings/RTd4495435ac0b179d4b32a68540b092fa/Media"}>, 
+ <Twilio.Video.V1.RoomRecordingInstance account_sid: ACb4cdf82e702ae4126df1a2019ccaaf97 status: completed date_created: 2018-07-12 07:04:49 UTC sid: RT581925dd24ef5d099c20d21260436236 source_sid: MT665bfe6155e948a94cc90d3c13acb269 size: 223568 url: https://video.twilio.com/v1/Rooms/RM0d1f38e0c85667feab280b591e4bca18/Recordings/RT581925dd24ef5d099c20d21260436236 type: video duration: 14 container_format: mkv codec: vp8 grouping_sids: {"room_sid"=>"RM0d1f38e0c85667feab280b591e4bca18", "participant_sid"=>"PA4aa32e03f2c8b2f0aa5b250a87f7be67"} track_name: Camera room_sid: RM0d1f38e0c85667feab280b591e4bca18 links: {"media"=>"https://video.twilio.com/v1/Rooms/RM0d1f38e0c85667feab280b591e4bca18/Recordings/RT581925dd24ef5d099c20d21260436236/Media"}>, 
+ <Twilio.Video.V1.RoomRecordingInstance account_sid: ACb4cdf82e702ae4126df1a2019ccaaf97 status: completed date_created: 2018-07-12 07:03:35 UTC sid: RTd40ec4e16101af7268213cad075f44be source_sid: MT333884abe71b4e535270cd0c07b65cdc size: 28166722 url: https://video.twilio.com/v1/Rooms/RM0d1f38e0c85667feab280b591e4bca18/Recordings/RTd40ec4e16101af7268213cad075f44be type: video duration: 155 container_format: mkv codec: vp8 grouping_sids: {"room_sid"=>"RM0d1f38e0c85667feab280b591e4bca18", "participant_sid"=>"PAf221fbf26967000a93d467a2d22789be"} track_name: Camera room_sid: RM0d1f38e0c85667feab280b591e4bca18 links: {"media"=>"https://video.twilio.com/v1/Rooms/RM0d1f38e0c85667feab280b591e4bca18/Recordings/RTd40ec4e16101af7268213cad075f44be/Media"}>, 
+ <Twilio.Video.V1.RoomRecordingInstance account_sid: ACb4cdf82e702ae4126df1a2019ccaaf97 status: completed date_created: 2018-07-12 07:03:35 UTC sid: RT45c309af45167eb2236b189b169452b3 source_sid: MTd0e3fe65ed61e643c3640733bcc126d5 size: 447109 url: https://video.twilio.com/v1/Rooms/RM0d1f38e0c85667feab280b591e4bca18/Recordings/RT45c309af45167eb2236b189b169452b3 type: audio duration: 77 container_format: mka codec: opus grouping_sids: {"room_sid"=>"RM0d1f38e0c85667feab280b591e4bca18", "participant_sid"=>"PAf221fbf26967000a93d467a2d22789be"} track_name: Microphone room_sid: RM0d1f38e0c85667feab280b591e4bca18 links: {"media"=>"https://video.twilio.com/v1/Rooms/RM0d1f38e0c85667feab280b591e4bca18/Recordings/RT45c309af45167eb2236b189b169452b3/Media"}>]
+
+
+ open('rec.webm', 'wb') do |file|
+  file << open('https://video.twilio.com/v1/Compositions/CJ580dcce3498d7fd2aaa5d05c536a9551/Media').read
+end 
+
+
+uri = "https://video.twilio.com/v1/Compositions/CJ580dcce3498d7fd2aaa5d05c536a9551/Media?Ttl=6000"
+
+RM5c7f9457ba89dbd3261ac86d0d33fba7
+
+composition = @client.video.compositions.create(
+  room_sid: 'RM17c9a47fe172b4a77ef3e758c8856069',
+  audio_sources: '*',
+  status_callback: 'https://ee137fec.ngrok.io/api/video_calls/random_callback',
+  format: 'mp4'
+)
+
+
+
+composition_sid = 'CJ4b697a43eceb72bf88347f481b169752'
+
+uri = "https://video.twilio.com/v1/Compositions/#{composition_sid}/Media?Ttl=6000"
+
+response = @client.request("video.twilio.com", 433, 'GET', uri)
+
+@client.video.rooms('RM17c9a47fe172b4a77ef3e758c8856069').recordings.list
+
+

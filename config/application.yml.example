@@ -1,0 +1,18 @@
+development:
+  base_url: 'YOUR APPLICATION BASE URL'
+  api_client_id: 'YOUR API CLIENT ID'         #FOR API AUTHENTICATION
+  api_client_secret: 'YOUR API CLIENT SECRET' #FOR API AUTHENTICATION
+  twilio:
+    sid:  'YOUR TWILIO SID'
+    auth_token: 'YOUR TWILIO AUTH TOKEN'
+    api_key:  'YOUR TWILIO API KEY'
+    api_secret_key: 'YOUR API SECRET KEY'
+    caller_id: 'YOUR TWILIO CALLER ID'
+    call_caller_api : 'YOUR TWILIO CALLBACK ENDPOINT FOR CALLING CALLER BACK AFTER CALLEE IS CONNECTED'
+    video_call_status_callback_api : 'YOUR VIDEO CALL STATUS CALLBACK ENDPOINT'
+    audio_call_status_callback_api : 'YOUR AUDIO CALL STATUS CALLBACK ENDPOINT'
+    audio_call_recording_callback_api : 'YOUR AUDIO CALL RECORDING STATUS CALLBACK ENDPOINT'
+    message_status_callback_api : 'YOUR MESSAGE STATUS CALLBACK ENDPOINT'
+
+# Used as the base secret for all MessageVerifiers in Rails, including the one protecting cookies.
+secret_key_base: 'YOUR SECRET KEY'
